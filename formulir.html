@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengisian Formulir Pendaftaran</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+      body {
+        position: relative;
+        background-color: #2596be;
+        margin: 0;
+        z-index: -2;
+        height: 100vh;
+        font-family: "Roboto", sans-serif;
+        color: rgb(29, 29, 29);
+      }
+
+      header {
+        display: flex;
+        position: sticky;
+        background-color: #08cedc;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .title-page {
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 20px;
+      }
+
+      .link-container {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 50px;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 25px;
+        width: 170px;
+      }
+
+      .link-container-content {
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.15s ease-in-out;
+      }
+
+      .link-container-content:hover {
+        text-decoration: underline;
+        color:#ffffff
+      }
+
+      footer {
+        display: flex;
+        background-color: #08cedc;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+
+      .sidebar {
+        position: fixed;
+        background-color: #08cedc;
+        left: 0;
+        top: 0px;
+        bottom: 0px;
+        width: 90px;
+        z-index: -1;
+      }
+
+      .sidebar a {
+        text-decoration: none;
+      }
+
+      .sidebar-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 74px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+
+      .active-sidebar{
+        background-color: #ff00ff71;
+      }
+
+      .sidebar-container:hover {
+        opacity: 0.75;
+        background-color: #daa43871;
+        border-right: 1px solid gray;
+      }
+
+      .active-sidebar:hover{
+        opacity: 1;
+        background-color: #da9c2071;
+      }
+
+      .sidebar-container svg {
+        width: 20px;
+      }
+
+      .sidebar-container p {
+        margin-top: 6px;
+        font-family: "Roboto", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        color: rgb(29, 29, 29);
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        background-color: #ffffff;
+        margin-top: 50px;
+        margin-left: 400px;
+        margin-right: 30px;
+        padding: 40px 30px;
+        border-radius: 30px;
+      }
+
+      .form-desc {
+        margin-top: 0;
+        margin-left: 30px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      td{
+        padding: 5px;
+      }
+
+      .text{
+        width: 300px
+      }
+
+      .submit{
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #a5eef7;
+        cursor: pointer;
+        margin-top: 20px;
+        font-family: "Roboto", sans-serif;
+        color: #3b3b3b;
+        font-weight: 500;
+        transition: 0.15s ease-in-out;
+      }
+
+      .submit:hover{
+        background-color: #39ca45e3;
+        color: #ffffff
+      }
+
+      .submit:active {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <p class="title-page">Formulir</p>
+      </div>
+
+      <div class="link-container">
+        <a
+          style="margin-left: 5px"
+          class="link-container-content"
+          href="https://wayhui.id/"
+          >Way Huwi</a
+        >
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <a href="homepage.html">
+        <div style="margin-top: 84.5px" class="sidebar-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="35.996" enable-background="new 0 0 42 35.996" overflow="visible" viewBox="0 0 42 35.996" id="homepage"><path d="M21,25.5 M21,25.5c1.668,0,3,1.336,3,3h-6C18,26.836,19.336,25.5,21,25.5z M1.5,7.5h39v21H33v-6.746
+                c0-0.23-0.105-0.445-0.285-0.59l-11.25-9c-0.274-0.219-0.66-0.219-0.934,0l-11.25,9C9.102,21.309,8.996,21.523,9,21.754V28.5H1.5
+                V7.5z M9.75,3c0.414,0,0.746,0.336,0.75,0.75c0,0.414-0.336,0.75-0.75,0.75C9.336,4.504,8.996,4.164,9,3.75C9,3.332,9.336,3,9.75,3z
+                 M6.75,3C7.164,3,7.496,3.336,7.5,3.75c0,0.414-0.336,0.75-0.75,0.75C6.332,4.504,5.996,4.164,5.996,3.75
+                C5.996,3.332,6.336,3,6.75,3z M3.75,3c0.414,0,0.746,0.336,0.746,0.75C4.5,4.164,4.164,4.5,3.75,4.5S3,4.164,3.004,3.75
+                C3.004,3.336,3.336,3,3.75,3z M0.75,0C0.336,0,0,0.34,0,0.754V29.25C0,29.664,0.336,30,0.75,30H9v5.25
+                c0,0.414,0.336,0.75,0.75,0.746h7.496C17.66,36,18,35.664,18,35.25V30h6v5.25c0.004,0.414,0.336,0.746,0.75,0.746h7.5
+                c0.414,0,0.746-0.336,0.75-0.746V30h8.246C41.664,30.004,42,29.664,42,29.25V0.754C42,0.336,41.664,0,41.246,0H0.75z"></path></svg>
+          <p>Homepage</p>
+        </div>
+      </a>
+
+      <a href="formulir.html">
+        <div class="sidebar-container active-sidebar">
+          <svg
+            class="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
+            viewBox="0 0 32 32"
+            id="registration"
+          >
+            <path
+              d="M31.231,13A2,2,0,0,0,28.4,13l-1,1h0l-3.218,3.218V7.5a.482.482,0,0,0-.013-.064.456.456,0,0,0-.012-.062.492.492,0,0,0-.121-.227l-7-7A.492.492,0,0,0,16.81.025a.452.452,0,0,0-.061-.012A.484.484,0,0,0,16.683,0h-14a2.5,2.5,0,0,0-2.5,2.5v27a2.5,2.5,0,0,0,2.5,2.5h19a2.5,2.5,0,0,0,2.5-2.5V22.876l6.046-6.046h0l1-1A2,2,0,0,0,31.231,13ZM17.183,1.707,22.476,7H18.683a1.5,1.5,0,0,1-1.5-1.5ZM16.7,7H4.683a.5.5,0,0,1-.5-.5v-2a.5.5,0,0,1,.5-.5h11.5V5.5A2.476,2.476,0,0,0,16.7,7Zm6.487,22.5a1.5,1.5,0,0,1-1.5,1.5h-19a1.5,1.5,0,0,1-1.5-1.5V2.5A1.5,1.5,0,0,1,2.683,1h13.5V3H4.683a1.5,1.5,0,0,0-1.5,1.5v2A1.5,1.5,0,0,0,4.683,8h18.5V18.219L17.442,23.96a.475.475,0,0,0-.058.088c-.01.016-.027.025-.035.042l-1.414,2.828a.492.492,0,0,0,.068.527l-.622.628a.5.5,0,1,0,.711.7l.605-.612.038.038a.5.5,0,0,0,.577.094l2.828-1.415c.017-.008.026-.025.042-.035a.475.475,0,0,0,.088-.058l2.913-2.912Zm-5.25-4.342,1.14,1.14-1.885.943-.135-.136,0-.006-.006,0-.052-.052Zm5.4-2.844,0,0-3.412,3.411L18.5,24.314l9.252-9.252,1.414,1.414Zm7.193-7.193-.648.648-1.415-1.415.648-.648a1,1,0,1,1,1.415,1.415ZM8.683,16h12a.5.5,0,0,0,0-1h-12a.5.5,0,1,0,0,1Zm0-3h12a.5.5,0,0,0,0-1h-12a.5.5,0,1,0,0,1Zm5,14.925a1.78,1.78,0,0,1-1.077-.329,2.923,2.923,0,0,0-3.183,0,1.78,1.78,0,0,1-1.077.329A1.778,1.778,0,0,1,7.272,27.6a2.752,2.752,0,0,0-1.589-.472.5.5,0,1,0,0,1,1.778,1.778,0,0,1,1.075.329,2.752,2.752,0,0,0,1.589.472,2.761,2.761,0,0,0,1.591-.471,1.926,1.926,0,0,1,2.153,0,2.761,2.761,0,0,0,1.591.471.5.5,0,0,0,0-1ZM8.683,11h12a.5.5,0,0,0,0-1h-12a.5.5,0,1,0,0,1Zm0,7h12a.5.5,0,0,0,0-1h-12a.5.5,0,1,0,0,1Zm-4,0a1.5,1.5,0,1,0-1.5-1.5A1.5,1.5,0,0,0,4.683,18Zm0-2a.5.5,0,1,1-.5.5A.5.5,0,0,1,4.683,16Zm1.5,5.5a1.5,1.5,0,1,0-1.5,1.5A1.5,1.5,0,0,0,6.183,21.5Zm-1.5.5a.5.5,0,1,1,.5-.5A.5.5,0,0,1,4.683,22Zm4-1h8a.5.5,0,0,0,0-1h-8a.5.5,0,1,0,0,1Zm-4-8a1.5,1.5,0,1,0-1.5-1.5A1.5,1.5,0,0,0,4.683,13Zm0-2a.5.5,0,1,1-.5.5A.5.5,0,0,1,4.683,11Zm4,12h8a.5.5,0,0,0,0-1h-8a.5.5,0,1,0,0,1Z"
+            ></path>
+          </svg>
+          <p>Formulir</p>
+        </div>
+      </a>
+
+      <a href="tabel.html">
+        <div class="sidebar-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            id="table"
+          >
+            <path
+              d="M1.016 3.163v17.575h21.969V3.163H1.016zm15.378 3.295v3.661h-4.028V6.458h4.028zm5.492 8.421h-4.394v-3.661h4.394v3.661zm-5.492 0h-4.028v-3.661h4.028v3.661zm-14.28-3.661h9.154v3.661H2.114v-3.661zm9.154-4.76v3.661H2.114V6.458h9.154zM2.114 19.639v-3.661h9.154v3.661H2.114zm10.252 0v-3.661h4.028v3.661h-4.028zm5.126 0v-3.661h4.394v3.661h-4.394zm4.394-9.52h-4.394V6.458h4.394v3.661z"
+            ></path>
+          </svg>
+          <p>Table</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="content">
+      <p class="form-desc">Mohon Isikan Data Diri Anda:</p>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <table width="500">
+            <form method="get">
+              <tr>
+                <td>NIK</td>
+                <td>: <input required class="text nik" name="nik" type="text" /></td>
+              </tr>
+              <tr>
+                <td>Nama</td>
+                <td>: <input required class="text nim" name="nim" type="text" /></td>
+              </tr>
+              <tr>
+                <td>Perkerjaan</td>
+                <td>: <input required class="text pekerjaan" name="pekerjaan" type="text" /></td>
+              </tr>
+              <tr>
+                <td>No. Telp</td>
+                <td>: <input required class="text notelp" name="notelp"  type="text" /></td>
+              </tr>
+              <tr>
+                <td>Gol. Darah</td>
+                <td>: <input required class="text goldarah" name="goldarah" type="text" /></td>
+              </tr>
+              <tr>
+                <td>Jenis Kelamin</td>
+                <td>: <input required type="radio" id="laki-laki" name="jenkel" class="jenkel" value="Laki-Laki" /> <label for="laki-laki">Laki-Laki</label>  <input type="radio" id="perempuan" name="jenkel" class="jenkel" value="Perempuan" /> <label for="perempuan">Perempuan</label> </td>
+              </tr>
+              <tr>
+                <td>Tanggal Lahir</td>
+                <td>: <input required name="tanggal lahir" class="tanggal" type="date" /></td>
+              </tr>
+              <tr>  
+                <td>Alamat</td>
+                <td>: <input required class="text alamat" name="alamat" type="text" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input class="submit" type="submit" onclick="
+                  addData();"></td>
+              </tr>
+            </form>
+          </table>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>Muhammad Ridho Sandi Kurniawan © 2023</strong></p>
+    </footer>
+
+    <script src="script/form.js"></script>
+  </body>
+</html>
